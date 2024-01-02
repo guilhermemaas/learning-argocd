@@ -34,20 +34,26 @@ Sync operation status:
         - Argo não conseguiu determinar o estado atual da operação de sincronização.
 
 Refresh:
-    - Força o ArgoCD a buscar as últimas informações no repositório Git.
-    - O Refresh apenas atualiza o estado do "app" no ArgoCD, para aplicar as alterações deve-se clicar em "Sync".
+- Força o ArgoCD a buscar as últimas informações no repositório Git.
+- O Refresh apenas atualiza o estado do "app" no ArgoCD, para aplicar as alterações deve-se clicar em "Sync".
 
 
 Health:
-    - A saúde dos recursos de uma App que está sendo implantanda no cluster Kubernetes.
-    - Existem alguns tipos de estado health, como:
-        - Healthy: Indica que um recurso está saudável e funcionando corretamente.
-        - Degraded: Indica que um recurso está funcionando, mas pode estar com algum problema que pode afetar seu funcionamento.
-        - Progressing: Indica que o recurso está em processo de implantação ou atualização.
-        - Suspended: Indica que o recurso foi suspenso e não está sendo processado pelo ArgoCD.
-        - Missing: Indica que o recurso está ausente ou não pode ser encontrado no cluster Kubernetes.
+- A saúde dos recursos de uma App que está sendo implantanda no cluster Kubernetes.
+- Existem alguns tipos de estado health, como:
+    - Healthy: Indica que um recurso está saudável e funcionando corretamente.
+    - Degraded: Indica que um recurso está funcionando, mas pode estar com algum problema que pode afetar seu funcionamento.
+    - Progressing: Indica que o recurso está em processo de implantação ou atualização.
+    - Suspended: Indica que o recurso foi suspenso e não está sendo processado pelo ArgoCD.
+
+    - Missing: Indica que o recurso está ausente ou não pode ser encontrado no cluster Kubernetes.
 
 Boas práticas:
-    - Separating Config x Source Code Repositories.
+- Separating Config x Source Code Repositories.
 
 Benefícios:
+- Implantações automatizadas.
+- Sincronização contínua (Monitorar a alteração os arquivos no git) e implementar a atualização automática.
+- Declaratividade e versionamento.
+- GitOps.
+- Uma instalação pode operar em diferentes clusters.
